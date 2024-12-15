@@ -36,15 +36,6 @@ Route::post('/auth/login', [AuthController::class, 'loginUser']);
 Route::post('/auth/send-otp', [AuthController::class, 'sendOtp']);
 Route::post('/auth/reset-password', [AuthController::class, 'resetPassword']);
 
-Route::get('/customer-profile/{id}', [CustomerController::class, 'userProfile']);
-Route::post('/customer/create', [CustomerController::class, 'store']);
-Route::post('/customer/update', [CustomerController::class, 'update']);
-
-/*Route::get('/manufacturer/list', [ManufacturerController::class, 'index']);
-Route::post('/manufacturer/create', [ManufacturerController::class, 'store']);
-Route::get('/manufacturer/edit/{id}', [ManufacturerController::class, 'edit']);
-Route::post('/manufacturer/update', [ManufacturerController::class, 'update']);*/
-
 Route::post('/logout', [AuthController::class, 'logoutUser']);
 
 /**
