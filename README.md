@@ -10,3 +10,10 @@ To Run Backend:
 - run: composer install
 - run: php artisan migrate fresh --seed
 - run: php artisan serve
+
+
+To Run Frentend: 
+
+- go to frontend directory
+- run: npm install
+- run: npm run serve
