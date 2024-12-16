@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Interfaces;
+namespace Axilweb\Vaccine\Interfaces;
 
 use Illuminate\Http\Client\Request;
 

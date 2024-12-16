@@ -1,20 +1,20 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace Axilweb\Vaccine\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Interfaces\VaccinationCenterRepositoryInterface;
+use Axilweb\Vaccine\Interfaces\VaccinationCenterCapacityLimitDayWiseRepositoryInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
 
-class VaccinationCenterController extends Controller
+class VaccinationCenterCapacityLimitDayWiseController extends Controller
 {
-    protected $vaccinationCenterRepositoryObj;
+    protected $vaccinationCenterCapacityLimitDayWiseRepositoryObj;
 
-    public function __construct(VaccinationCenterRepositoryInterface $vaccinationCenterRepositoryInterface)
+    public function __construct(VaccinationCenterCapacityLimitDayWiseRepositoryInterface $vaccinationCenterCapacityLimitDayWiseRepositoryInterface)
     {
-        $this->vaccinationCenterRepositoryObj = $vaccinationCenterRepositoryInterface;
+        $this->vaccinationCenterCapacityLimitDayWiseRepositoryObj = $vaccinationCenterCapacityLimitDayWiseRepositoryInterface;
     }
 
     /**
@@ -22,12 +22,7 @@ class VaccinationCenterController extends Controller
      */
     public function index()
     {
-        try {
-            $data = $this->vaccinationCenterRepositoryObj->findAvailableCenterForRegistration();
-            return self::return_response('Vaccinaiton Center Faced Successfully', true, $data, count(($data)), 200);
-        } catch (\Exception $e) {
-            return self::return_response($e->getMessage(), false, [], 0, 417);
-        }
+        //
     }
 
     /**
@@ -49,12 +44,13 @@ class VaccinationCenterController extends Controller
         try {
             $request->validate(
                 [
-                    'center_name' => 'required|max:255|unique:vaccination_center',
-                    'status' => 'boolean'
+                    'center_id' => 'required|integer',
+                    'date_of_vaccination' => 'required|date|after_or_equal:today',
+                    'capacity_limit' => 'required|integer'
                 ]
             );
-            $data = $this->vaccinationCenterRepositoryObj->create($request->all());
-            return self::return_response('Vaccinaiton Created Successfully', true, $data, 0, 200);
+            $data = $this->vaccinationCenterCapacityLimitDayWiseRepositoryObj->create($request->all());
+            return self::return_response('Vaccinaiton Day Wise Capacity Limit Saved Successfully', true, $data, 0, 200);
         } catch (\Exception $e) {
             return self::return_response($e->getMessage(), false, [], 0, 417);
         }
@@ -85,11 +81,12 @@ class VaccinationCenterController extends Controller
         }
         try {
             $request->validate([
-                'center_name' => ['required', 'max:255', Rule::unique('vaccination_center')->ignore($id)],
-                'status' => 'boolean'
+                'center_id' => 'required|integer',
+                'date_of_vaccination' => 'required|date|after_or_equal:today',
+                'capacity_limit' => 'required|integer'
             ]);
 
-            $vaccinationCenterObj = $this->vaccinationCenterRepositoryObj->update($request->all(), $id);
+            $vaccinationCenterObj = $this->vaccinationCenterCapacityLimitDayWiseRepositoryObj->update($request->all(), $id);
             if ($vaccinationCenterObj) {
                 return self::return_response('Vaccinaiton Center Updated Successfully', true, $vaccinationCenterObj, 0, 200);
             } else {
@@ -111,15 +108,6 @@ class VaccinationCenterController extends Controller
         try {
             $data = $this->vaccinationCenterRepositoryObj->delete($id);
             return self::return_response('Vaccinaiton Deleted Successfully', true, $data, 0, 200);
-        } catch (\Exception $e) {
-            return self::return_response($e->getMessage(), false, [], 0, 417);
-        }
-    }
-    public function getAllAvailableCentersList()
-    {
-        try {
-            $data = $this->vaccinationCenterRepositoryObj->findAvailableCenterForRegistration();
-            return self::return_response('Vaccinaiton Center Faced Successfully', true, $data, count(($data)), 200);
         } catch (\Exception $e) {
             return self::return_response($e->getMessage(), false, [], 0, 417);
         }

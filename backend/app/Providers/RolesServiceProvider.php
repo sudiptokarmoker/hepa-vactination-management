@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Interfaces\RolesRepositoryInterface;
-use App\Repositories\RolesRepository;
+use Axilweb\Vaccine\Interfaces\RolesRepositoryInterface;
+use Axilweb\Vaccine\Repositories\RolesRepository;
 use Illuminate\Support\ServiceProvider;
 
 class RolesServiceProvider extends ServiceProvider

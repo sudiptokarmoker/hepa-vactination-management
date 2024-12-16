@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Interfaces\VaccinationCenterRepositoryInterface;
-use App\Repositories\VaccinationCenterRepository;
+use Axilweb\Vaccine\Interfaces\VaccinationCenterRepositoryInterface;
+use Axilweb\Vaccine\Repositories\VaccinationCenterRepository;
 use Illuminate\Support\ServiceProvider;
 
 class VaccinationCenterServiceProvider extends ServiceProvider

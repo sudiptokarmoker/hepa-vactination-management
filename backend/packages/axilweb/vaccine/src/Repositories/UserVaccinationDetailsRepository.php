@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Repositories;
+namespace Axilweb\Vaccine\Repositories;
 
-use App\Interfaces\UserVaccinationDetailsRepositoryInterface;
-use App\Models\UserVaccinationDetailsModel;
-use App\Models\VaccinationCenterCapacityLimitDayWiseModel;
-use App\Models\VaccinationCenterModel;
+use Axilweb\Vaccine\Interfaces\UserVaccinationDetailsRepositoryInterface;
+use Axilweb\Vaccine\Models\UserVaccinationDetailsModel;
+use Axilweb\Vaccine\Models\VaccinationCenterCapacityLimitDayWiseModel;
+use Axilweb\Vaccine\Models\VaccinationCenterModel;
 
 class UserVaccinationDetailsRepository implements UserVaccinationDetailsRepositoryInterface
 {

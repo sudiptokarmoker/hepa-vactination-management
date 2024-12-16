@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories;
+namespace Axilweb\Vaccine\Repositories;
 
-use App\Interfaces\SearchRepositoryInterface;
+use Axilweb\Vaccine\Interfaces\SearchRepositoryInterface;
 use Illuminate\Support\Facades\DB;
 
 class SearchRepository implements SearchRepositoryInterface

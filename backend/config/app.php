@@ -1,5 +1,6 @@
 <?php
 
+use Axilweb\Vaccine\VaccineServiceProvider;
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
 
@@ -172,7 +173,8 @@ return [
         \App\Providers\VaccinationCenterServiceProvider::class,
         \App\Providers\UserVaccinationDetailsServiceProvider::class,
         \App\Providers\VaccinationCenterCapacityLimitDayWiseServiceProvider::class,
-        \App\Providers\SearchServiceProvider::class
+        \App\Providers\SearchServiceProvider::class,
+        VaccineServiceProvider::class
     ])->toArray(),
 
     /*

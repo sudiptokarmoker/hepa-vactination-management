@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace Axilweb\Vaccine\Http\Controllers\Api;
 
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
-use App\Interfaces\UsersRepositoryInterface;
+use Axilweb\Vaccine\Interfaces\UsersRepositoryInterface;
 
 class AuthController extends Controller
 {

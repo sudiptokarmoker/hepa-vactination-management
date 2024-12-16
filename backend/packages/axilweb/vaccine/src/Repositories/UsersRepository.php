@@ -1,17 +1,16 @@
 <?php
 
-namespace App\Repositories;
+namespace Axilweb\Vaccine\Repositories;
 
 use App\Enums\ScheduleStatus;
-use App\Interfaces\UsersRepositoryInterface;
 use App\Models\User;
-use App\Models\UserVaccinationDetailsModel;
-use App\Models\VaccinationCenterCapacityLimitDayWiseModel;
+use Axilweb\Vaccine\Interfaces\UsersRepositoryInterface;
+use Axilweb\Vaccine\Models\UserVaccinationDetailsModel;
+use Axilweb\Vaccine\Models\VaccinationCenterCapacityLimitDayWiseModel;
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
-use Illuminate\Support\Facades\DB;
 
 class UsersRepository implements UsersRepositoryInterface
 {

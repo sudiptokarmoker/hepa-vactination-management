@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Interfaces\VaccinationCenterCapacityLimitDayWiseRepositoryInterface;
-use App\Repositories\VaccinationCenterCapacityLimitDayWiseRepository;
+use Axilweb\Vaccine\Interfaces\VaccinationCenterCapacityLimitDayWiseRepositoryInterface;
+use Axilweb\Vaccine\Repositories\VaccinationCenterCapacityLimitDayWiseRepository;
 use Illuminate\Support\ServiceProvider;
 
 class VaccinationCenterCapacityLimitDayWiseServiceProvider extends ServiceProvider

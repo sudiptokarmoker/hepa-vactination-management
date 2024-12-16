@@ -1,12 +1,10 @@
 <?php
 
-namespace App\Repositories;
+namespace Axilweb\Vaccine\Repositories;
 
-use App\Enums\ScheduleStatus;
-use App\Interfaces\VaccinationCenterRepositoryInterface;
-use App\Models\UserVaccinationDetailsModel;
-use App\Models\VaccinationCenterCapacityLimitDayWiseModel;
-use App\Models\VaccinationCenterModel;
+use Axilweb\Vaccine\Interfaces\VaccinationCenterRepositoryInterface;
+use Axilweb\Vaccine\Models\VaccinationCenterCapacityLimitDayWiseModel;
+use Axilweb\Vaccine\Models\VaccinationCenterModel;
 use Carbon\Carbon;
 
 class VaccinationCenterRepository implements VaccinationCenterRepositoryInterface

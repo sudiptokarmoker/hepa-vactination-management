@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace Axilweb\Vaccine\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Interfaces\SearchRepositoryInterface;
+use Axilweb\Vaccine\Interfaces\SearchRepositoryInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;

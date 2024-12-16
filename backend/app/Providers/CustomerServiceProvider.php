@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Interfaces\CustomerRepositoryInterface;
-use App\Repositories\CustomerRepository;
+use Axilweb\Vaccine\Interfaces\CustomerRepositoryInterface;
+use Axilweb\Vaccine\Repositories\CustomerRepository;
 use Illuminate\Support\ServiceProvider;
 
 class CustomerServiceProvider extends ServiceProvider

@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Interfaces\ManufacturerRepositoryInterface;
-use App\Repositories\ManufacturerRepository;
+use Axilweb\Vaccine\Interfaces\ManufacturerRepositoryInterface;
+use Axilweb\Vaccine\Repositories\ManufacturerRepository;
 use Illuminate\Support\ServiceProvider;
 
 class ManufacturerServiceProvider extends ServiceProvider

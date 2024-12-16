@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace Axilweb\Vaccine\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Interfaces\UsersRepositoryInterface;
+use Axilweb\Vaccine\Interfaces\UsersRepositoryInterface;
 
 class UsersController extends Controller
 {

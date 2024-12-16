@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Interfaces\SearchRepositoryInterface;
-use App\Repositories\SearchRepository;
+use Axilweb\Vaccine\Interfaces\SearchRepositoryInterface;
+use Axilweb\Vaccine\Repositories\SearchRepository;
 use Illuminate\Support\ServiceProvider;
 
 class SearchServiceProvider extends ServiceProvider

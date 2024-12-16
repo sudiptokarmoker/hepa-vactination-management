@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Interfaces\UsersRepositoryInterface;
-use App\Repositories\UsersRepository;
+use Axilweb\Vaccine\Interfaces\UsersRepositoryInterface;
+use Axilweb\Vaccine\Repositories\UsersRepository;
 use Illuminate\Support\ServiceProvider;
 
 class UserServiceProvider extends ServiceProvider

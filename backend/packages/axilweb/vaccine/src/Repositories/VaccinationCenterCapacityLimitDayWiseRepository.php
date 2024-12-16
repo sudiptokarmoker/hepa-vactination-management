@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Repositories;
+namespace Axilweb\Vaccine\Repositories;
 
-use App\Interfaces\VaccinationCenterCapacityLimitDayWiseRepositoryInterface;
-use App\Models\VaccinationCenterCapacityLimitDayWiseModel;
-use App\Models\VaccinationCenterModel;
+use Axilweb\Vaccine\Interfaces\VaccinationCenterCapacityLimitDayWiseRepositoryInterface;
+use Axilweb\Vaccine\Models\VaccinationCenterCapacityLimitDayWiseModel;
+use Axilweb\Vaccine\Models\VaccinationCenterModel;
 
 class VaccinationCenterCapacityLimitDayWiseRepository implements VaccinationCenterCapacityLimitDayWiseRepositoryInterface
 {
