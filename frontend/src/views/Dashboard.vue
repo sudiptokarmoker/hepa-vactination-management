@@ -42,7 +42,7 @@ export default {
     async fetchUsers() {
       this.loading = true;
       this.error = null;
-      await Api.get("/api/user-lists") // Your actual API endpoint
+      await Api.get("/api/vaccine/user-lists") // Your actual API endpoint
         .then((response) => {
           console.log(response);
           this.users = response.data.data; // Adjust according to your API response format

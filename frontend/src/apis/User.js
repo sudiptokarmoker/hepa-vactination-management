@@ -6,14 +6,14 @@ export default {
     await Csrf.getCookie();
 
     //return Api.post("/register", form);
-    return Api.post("/api/auth/register", form);
+    return Api.post("/api/vaccine/auth/register", form);
     //auth/register
   },
 
   async login(form) {
     await Csrf.getCookie();
 
-    return Api.post("/api/auth/login", form);
+    return Api.post("/api/vaccine/auth/login", form);
   },
 
   async logout() {
@@ -21,7 +21,7 @@ export default {
   
     try {
       // Make the API call to log out
-      await Api.post("/api/logout", null, {
+      await Api.post("/api/vaccine/logout", null, {
         headers: {
           Authorization: `Bearer ${token}`, // Include the token in the Authorization header
         },
@@ -46,6 +46,6 @@ export default {
   },
 
   getCenters() {
-    return Api.get("/api/available-vaccination-center");
+    return Api.get("/api/vaccine/available-vaccination-center");
   }
 };

@@ -66,7 +66,7 @@ export default {
           //   params: { query: this.searchQuery }, // Pass search query as query params
           // });
 
-          const response = await Api.get(`/api/search-nid/${this.searchQuery}`);
+          const response = await Api.get(`/api/vaccine/search-nid/${this.searchQuery}`);
 
           // Store the search results in the results array
           this.results = response.data.data;

@@ -39,7 +39,7 @@ export default {
       this.loading = true;
       this.error = null;
       axios
-        .get("/api/user-lists") // Your actual API endpoint
+        .get("/api/vaccine/user-lists") // Your actual API endpoint
         .then((response) => {
           this.users = response.data; // Adjust according to your API response format
         })
