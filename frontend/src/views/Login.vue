@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import User from "../apis/vaccine/User";
+import User from "../apis/User";
 
 export default {
   data() {
