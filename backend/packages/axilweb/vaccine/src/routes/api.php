@@ -36,6 +36,11 @@ Route::prefix('api/vaccine')->group(function () {
     Route::get('search-nid/{query}', [\Axilweb\Vaccine\Http\Controllers\Api\SearchController::class, 'searchByQuery']);
 //getAllAvailableCentersList
     Route::get('available-vaccination-center', [\Axilweb\Vaccine\Http\Controllers\Api\VaccinationCenterController::class, 'getAllAvailableCentersList']);
+
+    Route::get('vaccination-center-lists', [\Axilweb\Vaccine\Http\Controllers\Api\VaccinationCenterController::class, 'getAllAvailableCentersListAndScheduled']);
+
+    //findAvailableCenterWithCapacityDetailsAndScheduled
+
     Route::get('user-lists', [\Axilweb\Vaccine\Http\Controllers\Api\UsersController::class, 'index']);
 
     Route::middleware('auth:sanctum')->group(function () {
